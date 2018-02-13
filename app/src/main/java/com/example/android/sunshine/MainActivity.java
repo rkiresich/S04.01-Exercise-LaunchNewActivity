@@ -16,6 +16,7 @@
 package com.example.android.sunshine;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -122,7 +123,10 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         // TODO (2) Change the root layout of activity_detail.xml to a FrameLayout and remove unnecessary xml attributes
         //COMPLETE
         // TODO (3) Remove the Toast and launch the DetailActivity using an explicit Intent
-
+        //COMPLETE
+        Class destinationClass = DetailActivity.class;
+        Intent explicitIntent = new Intent(context,destinationClass);
+        startActivity(explicitIntent);
     }
 
     /**
